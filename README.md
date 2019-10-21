@@ -19,13 +19,14 @@ make
 sudo make install
 
 ```
- 
+3、参考文档 ```./configure --help```
+
 ### 将视频编码并分片
 ```
 $ kvazaar -i input.yuv --input-res 3840x2160 -o output.hvc --tiles 3x3 --slices tiles --mv-constraint frametilemargin -q 30 --period 30 --input-fps 30
 
 ```
-其中 3840x2160 是原生视频的分辨率 
+其中 ```--input-res 3840x2160``` 是原生视频的分辨率  ```-q 30``` 是量化参数
 
 ### 一些参数
 ```
@@ -57,4 +58,4 @@ Parallel processing:
                                    - tiles+wpp: Do both.
 
 ```
-
+### 打包
