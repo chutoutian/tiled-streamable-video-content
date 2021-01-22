@@ -68,9 +68,9 @@ $ ffmpeg -i  Timelapse.mkv -s 3840x2048  -c:v libx264 -b:v 2000k -g 90 -t 60 -an
 ```
 ### PSNR/SSIM
 ```
-$ffmpeg -i Diving_video_3840x2048_19000k.mp4 -i Diving_video_3840x2048_6000k.mp4 -lavfi   psnr="stats_file=diving_ssim_6000k.log" -f null -
+$ ffmpeg -i Diving_video_3840x2048_19000k.mp4 -i Diving_video_3840x2048_6000k.mp4 -lavfi   psnr="stats_file=diving_ssim_6000k.log" -f null -
 
-$ffmpeg -i Diving_video_3840x2048_19000k.mp4 -i Diving_video_3840x2048_6000k.mp4 -lavfi   ssim="stats_file=diving_ssim_6000k.log" -f null -
+$ ffmpeg -i Diving_video_3840x2048_19000k.mp4 -i Diving_video_3840x2048_6000k.mp4 -lavfi   ssim="stats_file=diving_ssim_6000k.log" -f null -
 
 ```
 ### 参数
