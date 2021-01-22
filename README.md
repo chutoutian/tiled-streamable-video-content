@@ -62,17 +62,19 @@ Parallel processing:
 ##  ffmpeg 
 
 ### 转码
-
+```
 $ ffmpeg -i  Timelapse.mkv -s 3840x2048  -c:v libx264 -b:v 2000k -g 90 -t 60 -an Timelapse/video/Timelapse_video_3840x2048_2000k.mp4
 
+```
 ### PSNR/SSIM
-
+```
 $ffmpeg -i Diving_video_3840x2048_19000k.mp4 -i Diving_video_3840x2048_6000k.mp4 -lavfi   psnr="stats_file=diving_ssim_6000k.log" -f null -
 
 $ffmpeg -i Diving_video_3840x2048_19000k.mp4 -i Diving_video_3840x2048_6000k.mp4 -lavfi   ssim="stats_file=diving_ssim_6000k.log" -f null -
 
+```
 ### 参数
-
+```
 Print help / information / capabilities:
 -L                  show license
 -h topic            show help
@@ -173,3 +175,4 @@ Subtitle options:
 -fix_sub_duration   fix subtitles duration
 -canvas_size size   set canvas size (WxH or abbreviation)
 -spre preset        set the subtitle options to the indicated preset
+```
